@@ -95,9 +95,9 @@ M.new = function (arg)
       local left = map.getTileIndices({x = rect.left + 1, y = rect.bottom})
       local right = map.getTileIndices({x = rect.right - 1, y = rect.bottom})
       if self.velocity.y > 0 then
-	for x = left.x,right.x do
-	  event.notify("tileCollision", {x = x, y = left.y, entity = object})
-	end
+        for x = left.x,right.x do
+          event.notify("tileCollision", {x = x, y = left.y, entity = object})
+        end
       end
       if map then
         -- Vertical collisions
